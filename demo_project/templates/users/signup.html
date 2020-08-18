@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Sign up</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+    <center>
+        <br>
+        <form method="post">
+            <h1>Sign up here</h1>
+            <div class="select2-container">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="button" value="Sign up">
+                <br>
+                <br>
+                <p>Go to <a href="/" class="button">Home</a> </p>
+            </div>
+        </form>
+    </center>
+    </body>
+</html>

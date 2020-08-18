@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Create Blog</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+    <center>
+        <h2>Create a blog</h2>
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <input type="submit" class="button" value="CREATE">
+        </form>
+    </center>
+    <br>
+    <center><a href="/home/user" class="button">Back to Home</a></center>
+    </body>
+</html>

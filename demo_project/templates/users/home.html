@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Home page</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+    <center>
+        <br>
+        <h1>Welcome to the blogging application</h1>
+        <br>
+        <br>
+        <p>Already a registered user? Login here</p>
+        <h4><a href="/login" class="button">Login</a></h4>
+        <br>
+        <br>
+        <p>Don't have an account? Sign up here</p>
+        <h4><a href="/signup" class="button">Signup</a></h4>
+    </center>
+    </body>
+</html>

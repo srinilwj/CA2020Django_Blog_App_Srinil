@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Update Blog</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+    <center>
+        <form method="POST" class="post-form" action="/home/user/">
+        {% csrf_token %}
+            <div class="container">
+            <br>
+
+            <label class="col-sm-1 col-form-label"></label>
+
+            <h3>Update Blog</h3>
+
+
+
+            <label class="col-sm-2 col-form-label">Title :</label>
+
+                <input type="text" name="title" required maxlength="50" value="{{ blog.title }}"/>
+
+                <br>
+
+            <label class="col-sm-2 col-form-label">Category :</label>
+
+                <input type="text" name="category" required maxlength="50" value="{{ blog.category }}"/>
+
+                <br>
+
+            <label class="col-sm-2 col-form-label">Author :</label>
+
+                <input type="text" name="author" required maxlength="50" value="{{ blog.author }}"/>
+
+                <br>
+
+            <label class="col-sm-2 col-form-label">Content :</label>
+<!--                <textarea name="message" rows="10" cols="50" required maxlength="3000">{{ blog.content }}</textarea>-->
+                <input type="text" name="content" required maxlength="3000" value="{{ blog.content }}"/>
+                <br>
+<!--            {{ form.as_p }}-->
+                <br>
+                <button type="submit" class="button">Update</button>
+                <br>
+                <br>
+                <a href="/home/user" class="button">Go Back</a>
+            </div>
+        </form>
+    </center>
+    <br>
+    <center><a href="/" class="button">Logout</a></center>
+    </body>
+</html>
+
+<!-- id="id_eid"-->
